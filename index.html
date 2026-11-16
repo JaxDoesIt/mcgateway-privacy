@@ -18,7 +18,7 @@ p,li{color:#b8c4d6} a{color:#56c7ff}
 <p>This Privacy Policy explains how the MCGateway Android application and the related MCGateway Hub service handle information when you use MCGateway.</p>
 
 <div class="box">
-<p><strong>Effective date:</strong> August 11, 2026</p>
+<p><strong>Effective date:</strong> November 15, 2026</p>
 <p><strong>Privacy contact:</strong> <a href="mailto:mcgatewaycontact@gmail.com">mcgatewaycontact@gmail.com</a></p>
 </div>
 
@@ -34,6 +34,18 @@ p,li{color:#b8c4d6} a{color:#56c7ff}
 <li><strong>Technical diagnostics</strong>, such as packet counters, discovery status, connection status, the last LAN client address, and error information used for troubleshooting.</li>
 </ul>
 <p>Technical diagnostics displayed in the app are primarily used locally on the device. Diagnostic information is not intentionally submitted to MCGateway merely because it appears on the Diagnostics screen. If you choose to copy or send diagnostics to MCGateway support, the information you share may be used to investigate your support request.</p>
+
+<h2>2.1. Automatic crash reporting in newer app versions</h2>
+<p>Beginning with version 1.0.0-beta02, MCGateway includes Google Firebase Crashlytics to help us investigate crashes, freezes, and app reliability. Earlier app versions do not include this automatic reporting integration.</p>
+<p>Automatic crash reporting is enabled by default in these versions. Reports and related app-quality information can include:</p>
+<ul>
+<li>Crash stack traces, error details, and relevant app state, including the app screen being viewed.</li>
+<li>App version, Android version, device model, and other technical device metadata.</li>
+<li>Crashlytics installation UUIDs, Firebase installation IDs, and technical session identifiers or session information used to measure app reliability.</li>
+</ul>
+<p>We do not add Minecraft or Discord account identities, player names, or Minecraft packet contents as custom Crashlytics data. This does not change the separate Hub processing described in section 3. These identifiers can distinguish an app installation.</p>
+<p>You can turn automatic reporting off in <strong>About &rarr; Send crash reports</strong>. The choice is saved across app restarts. Turning it off disables future automatic crash reporting and requests deletion of unsent reports on the device; it does not remove reports that Firebase has already received. Turning reporting off does not disable the LAN bridge.</p>
+<p>The local Diagnostics screen and any diagnostics you choose to copy or send to support are separate from this automatic reporting. The app does not include the Google Analytics SDK or an advertising SDK.</p>
 
 <h2>3. Information processed by the MCGateway Hub</h2>
 <p>When a Minecraft client connects through the app to the MCGateway Hub, the Hub may receive and process information supplied through the Minecraft Bedrock connection. Depending on the connection and features used, this can include:</p>
@@ -56,10 +68,13 @@ p,li{color:#b8c4d6} a{color:#56c7ff}
 
 <h2>5. Sharing of information</h2>
 <p>MCGateway does not sell personal information. Information may be processed by infrastructure or hosting providers when necessary to operate the service, and may be disclosed when required by law or when reasonably necessary to protect users, MCGateway, or the service from fraud, abuse, or security threats.</p>
+<p>For the app versions described in section 2.1, Google Firebase processes crash and related technical information on our behalf to provide Crashlytics and its installation/session services. These services are used for reliability diagnostics, not advertising. See <a href="https://firebase.google.com/support/privacy">Firebase's privacy and security information</a> and <a href="https://firebase.google.com/docs/android/play-data-disclosure">Firebase's Android data disclosure guidance</a> for additional details about these services.</p>
 <p>If you choose to open an external service, such as Discord, through a link in the app, your interaction with that third-party service is governed by that service's own privacy practices.</p>
 
 <h2>6. Data retention and deletion</h2>
 <p>Temporary app diagnostics are kept only as needed for the current app or service operation unless you choose to copy or share them. MCGateway Hub records and service statistics may be retained for as long as reasonably necessary to operate the service, maintain historical statistics, provide support, prevent abuse, comply with legal obligations, or resolve technical issues.</p>
+<p>Automatic reports sent to Firebase are subject to Firebase's retention practices. Google's current documentation states that Crashlytics keeps crash stack traces and associated identifiers for 90 days before starting to remove them from live and backup systems. This is separate from local app diagnostics and Hub records. Turning reporting off does not by itself delete previously uploaded reports.</p>
+<p>Crash report identifiers are not automatically linked by the app to a Minecraft or Discord account. If you make a data request about a crash report, we may need additional information about the event to help locate the relevant data.</p>
 <p>You may request deletion of personal information associated with you by contacting <a href="mailto:mcgatewaycontact@gmail.com">mcgatewaycontact@gmail.com</a>. Please provide enough information for us to identify the relevant MCGateway or Minecraft account data. Some information may be retained when reasonably necessary for security, fraud prevention, legal compliance, or other legitimate operational requirements.</p>
 
 <h2>7. Security</h2>
